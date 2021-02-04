@@ -44,7 +44,7 @@ public class FlightSearch extends Base {
 		conn.connect();
 		int respCode = conn.getResponseCode();
 
-		AssertJUnit.assertEquals(400, respCode);
+		AssertJUnit.assertEquals(200, respCode);
 		
 
 		log.info("Response Code is " + respCode);
@@ -68,7 +68,7 @@ public class FlightSearch extends Base {
 		lpObjects.destinyCity().sendKeys(destinationCity);
 		lpObjects.destinyCityCombo().click();
 		lpObjects.date().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		log.info("Destination selected");
 	}
 
