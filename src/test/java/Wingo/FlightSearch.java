@@ -1,5 +1,7 @@
 package Wingo;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -13,7 +15,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import junit.framework.Assert;
 import pageObjects.Objects;
 import resources.Base;
 
@@ -43,7 +44,7 @@ public class FlightSearch extends Base {
 		conn.connect();
 		int respCode = conn.getResponseCode();
 
-		Assert.assertEquals(400, respCode);
+		AssertJUnit.assertEquals(400, respCode);
 		
 
 		log.info("Response Code is " + respCode);
@@ -76,7 +77,7 @@ public class FlightSearch extends Base {
 		Objects lpObjects = new Objects(driver);
 		String ParentWindowHandle = driver.getWindowHandle();
 		// System.out.println("ParentWindowHandle " + ParentWindowHandle);
-		Assert.assertTrue(lpObjects.searchButton().isEnabled());
+		AssertJUnit.assertTrue(lpObjects.searchButton().isEnabled());
 		lpObjects.searchButton().click();
 
 		// System.out.println(driver.getCurrentUrl());
@@ -91,7 +92,7 @@ public class FlightSearch extends Base {
 
 		lpObjects.goBasic().click();
 		Thread.sleep(1000);
-		Assert.assertTrue("Continue!", lpObjects.continueButton().isEnabled());
+		AssertJUnit.assertTrue("Continue!", lpObjects.continueButton().isEnabled());
 		log.info("Fare selected");
 		lpObjects.continueButton().click();
 	}

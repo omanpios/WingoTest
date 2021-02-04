@@ -1,5 +1,7 @@
 package Wingo;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -10,7 +12,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import junit.framework.Assert;
 import pageObjects.Objects;
 import resources.Base;
 
@@ -33,7 +34,7 @@ public class ManageYourTrip extends Base {
 	public void manageYourTrip() {
 		Objects lpObjects = new Objects(driver);
 		lpObjects.manageYourTrip().click();
-		Assert.assertTrue(lpObjects.manageYourTripTitle().isDisplayed());
+		AssertJUnit.assertTrue(lpObjects.manageYourTripTitle().isDisplayed());
 		log.info(lpObjects.manageYourTripTitle().getText() + " is displayed");
 	}
 
