@@ -26,7 +26,7 @@ public class Objects {
 			"/html/body/div/main/section/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div/div/div[3]/div/div[2]/div/div[5]/div");
 
 	By goBasic = By.xpath(
-			"/app-root/div[1]/app-step/main/app-ofertsemanal/div[3]/main/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/div[2]");
+			"//*[@id=\"vuelos-ida\"]/div/div/div[2]/div/div/div[1]/div/div[1]/div/label");
 	By continueButton = By.xpath("/html/body/app-root/div[1]/app-step/main/app-ofertsemanal/div[3]/main/div[8]/button");
 	By names = By.id("name-ad-1");
 	By lastnames = By.id("lastname-ad-1");
