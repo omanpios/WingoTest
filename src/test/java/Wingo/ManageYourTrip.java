@@ -40,7 +40,7 @@ public class ManageYourTrip extends DriverManager {
 
 	@AfterTest
 	public void closeBrowser() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		driver.quit();
 	}
 
