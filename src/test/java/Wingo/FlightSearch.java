@@ -16,9 +16,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageObjects.Objects;
-import resources.Base;
+import resources.DriverManager;
 
-public class FlightSearch extends Base {
+public class FlightSearch extends DriverManager {
 	Properties prop = new Properties();
 	Objects lpObjects = new Objects(driver);
 	public static Logger log = LogManager.getLogger(FlightSearch.class.getName());
