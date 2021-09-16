@@ -13,9 +13,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageObjects.Objects;
-import resources.Base;
+import resources.DriverManager;
 
-public class ManageYourTrip extends Base {
+public class ManageYourTrip extends DriverManager {
 	Properties prop = new Properties();
 	public static Logger log = LogManager.getLogger(ManageYourTrip.class.getName());
 	public String nameofCurrMethod = new Exception().getStackTrace()[0].getMethodName();
